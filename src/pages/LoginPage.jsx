@@ -31,7 +31,7 @@ function LoginPage() {
   return (
     <div
       className="flex items-center justify-center h-screen"
-      //aria-hidden="false"
+      aria-hidden="false"
     >
       <div className="w-full max-w-md p-8 rounded-lg backdrop-blur-md">
         <div className="container p-10 bg-zinc-900 backdrop-blur-lg border-b-4 border-l-4 border-white/30 rounded-2xl shadow-lg transform hover:shadow-xl transition-transform duration-500">
