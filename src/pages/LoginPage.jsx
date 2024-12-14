@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IoLogIn, IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
-import ReCaptcha from "react-google-recaptcha";
+//import ReCaptcha from "react-google-recaptcha";
 
 function LoginPage() {
   const {
@@ -13,7 +13,7 @@ function LoginPage() {
   } = useForm();
   const { signin, isAuthenticated, errors: signInErrors } = useAuth();
   const [passwordShow, setPasswordShown] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
+  //const [captchaValue, setCaptchaValue] = useState(null);
 
   const togglePasswordVisibility = () => {
     setPasswordShown(!passwordShow);
@@ -101,12 +101,6 @@ function LoginPage() {
               <IoLogIn size={24} className="inline mr-2" />
               Iniciar Sesión
             </button>
-
-            <ReCaptcha
-              sitekey="6LeynJMqAAAAANFEJuLNJ1u6uvlw_RBTBfKIA3xT"
-              onChange={(value) => setCaptchaValue(value)}
-              className="mt-4"
-            />
           </form>
 
           <p className="text-white mt-5">

@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { IoPersonAdd } from "react-icons/io5";
-import ReCaptcha from "react-google-recaptcha";
+//import ReCaptcha from "react-google-recaptcha";
 
 function RegisterPage() {
   const {
@@ -13,7 +13,7 @@ function RegisterPage() {
   } = useForm();
   const { signup, isAuthenticated, errors: registerErrors } = useAuth();
   const navigate = useNavigate();
-  const [captchaValue, setCaptchaValue] = useState(null);
+  //const [captchaValue, setCaptchaValue] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
@@ -126,12 +126,6 @@ function RegisterPage() {
               <IoPersonAdd size={24} className="inline mr-2" />
               Crear Cuenta
             </button>
-
-            <ReCaptcha
-              sitekey="6LeynJMqAAAAANFEJuLNJ1u6uvlw_RBTBfKIA3xT"
-              onChange={(value) => setCaptchaValue(value)}
-              className="mt-4"
-            />
           </form>
           <p className="text-white mt-5">
             ¿Ya tienes una cuenta?{" "}
